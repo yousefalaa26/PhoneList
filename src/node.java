@@ -69,7 +69,7 @@ class PhoneList {
         }
         if(head.name.equalsIgnoreCase(name)){
             System.out.println("Deleting contact with name "+name+", Phone: "+head.phoneNumber);
-            head = null;
+            head = head.next;
             return;
         } // If node is the head
 
