@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class main {
     public static void main(String[] args) {
@@ -9,7 +10,13 @@ public class main {
         while(true) {
             System.out.println();
             System.out.println("Please choose : \n1- Add new Contact.\n2- Display the list.\n3- Search contact.\n4- Delete contact");
-            flag = input.nextInt();
+            try{
+                flag = input.nextInt();
+            }
+            catch (InputMismatchException e){
+                input.next();
+                flag = 5;
+            }
 
             switch (flag){
                 case 1 :

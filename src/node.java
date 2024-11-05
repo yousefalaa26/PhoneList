@@ -74,7 +74,7 @@ class PhoneList {
         } // If node is the head
 
         node temp = head;
-        while(temp != null){
+        while(temp.next != null){
             if (temp.next.name.equalsIgnoreCase(name)){
                 System.out.println("Deleting contact with name "+name+", Phone: "+temp.next.phoneNumber);
                 temp.next = temp.next.next;
